@@ -1,7 +1,7 @@
 CloudBurst-Server
 ==========
 
-The backedn server-side of the CloudBurst project.
+The backend server-side of the CloudBurst project.
 
 You can find Cloudburst here:
 https://github.com/liam-kelly/CloudBurst
