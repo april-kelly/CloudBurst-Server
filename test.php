@@ -9,8 +9,9 @@
 //Includes
 require_once('./path.php');
 include_once(ABSPATH.'includes/models/settings.php');
+include_once(ABSPATH.'includes/models/protected_settings.php');
 
-$settings = new settings;
+$settings = new protected_settings;
 $results = $settings->fetch();
 
-echo $results['settings_path'];
+var_dump($results);
