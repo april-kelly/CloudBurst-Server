@@ -157,6 +157,19 @@ class db{
 
     }
 
+    //Function get_errors()
+    public function get_errors(){
+
+        //Check for errors
+        if(!(empty($this->errors))){
+
+            //Spit out any error messages
+            echo "<br />".$this->errors."<br />";
+
+        }
+
+    }
+
     //Function Destruct
     public function __destruct(){
 
