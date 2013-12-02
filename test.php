@@ -10,8 +10,7 @@
 require_once('./path.php');
 include_once(ABSPATH.'includes/models/settings.php');
 include_once(ABSPATH.'includes/models/protected_settings.php');
+include_once(ABSPATH.'includes/models/pdo.php');
 
-$settings = new protected_settings;
-$results = $settings->fetch();
-
-var_dump($results);
+$test = new db;
+echo $test->get_errors();

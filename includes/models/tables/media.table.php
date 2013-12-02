@@ -35,7 +35,7 @@ class media {
         }
 
         //Prepare the query
-        $query = 'SELECT * FROM `cloudburst2`.`media` WHERE `media_id` = :id';
+        $query = 'SELECT * FROM `media` WHERE `media_id` = :id';
         $handle = $this->dbc->prepare($query);
 
         //Execute the query
@@ -88,8 +88,8 @@ class media {
         //Execute the query
         $parameters = array('index'    => $this->media_id,
                             'filename' => $this->filename,
-                            'server_address' => $this->server_adderess;
-    );
+                            'server_address' => $this->server_adderess);
+
         $status = $handle->execute($parameters);
 
         //Get the results and return
