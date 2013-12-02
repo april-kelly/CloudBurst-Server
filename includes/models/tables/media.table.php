@@ -23,6 +23,15 @@ class media {
     //Control variables
     public $dbc;
 
+    //Constructor
+    public function __construct(){
+
+        //Setup a database connection
+        $dbc = new db;
+        $this->dbc = $dbc->dbc;
+
+    }
+
     //Define what an lookup looks like
     function lookup($media_id){
 
@@ -86,9 +95,10 @@ class media {
         $handle = $this->dbc->prepare($query);
 
         //Execute the query
-        $parameters = array('index'    => $this->media_id,
-                            'filename' => $this->filename,
-                            'server_address' => $this->server_adderess);
+        $parameters = array('index'          => $this->media_id,
+                            'filename'       => $this->filename,
+                            'server_address' => $this->server_adderess,
+                            'resolution'     => $this->resolution);
 
         $status = $handle->execute($parameters);
 
